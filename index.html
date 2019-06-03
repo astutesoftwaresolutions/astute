@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<!-- <link rel="stylesheet" href="css/fontawesome.css"> -->
+
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
+<style type="text/css">
+	
+	*{
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(fonts/Raleway-Regular.ttf);
+}
+
+@font-face { 
+  font-family: 'FontAwesome'; 
+  src: local('FontAwesome'); 
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif;
+
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.2;
+}
+.section{
+  padding:40px 0;
+}
+
+.section h2{
+  padding:0;
+  margin:0;
+}
+
+.section .fa{
+  font-size:50px;
+  margin: 15px;
+  padding: 30px;
+}
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/mac.jpg");
+  min-height:100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Astute</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <!-- <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a> -->
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> SERVICES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-large w3-hide-medium" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16 w3-hover-red">Close X</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-info-circle"></i> ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> SERVICES</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Welcome to <span class="w3-white w3-opacity" style="padding:5px">Astute</span> Software Solutions</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome to Astute Software Solutions</span><br>
+    <span class="w3-xlarge">Stop wasting valuable time and Start something that matters.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-text-blue w3-hover-opacity"></i>
+    <i class="fa fa-google-plus w3-text-red w3-hover-opacity"></i>
+    <i class="fa fa-bold w3-text-orange w3-hover-opacity"></i>
+    <!--  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i> -->
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <p class="w3-center w3-large">Key features of our company</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px;">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center w3-text-pink"></i>
+      <p class="w3-large">Responsive</p>
+      <p>We,Astute Software Solutions design responsive and multi browser compatible websites,with best viewing support on Desktop and Mobile browsers.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo w3-text-red"></i>
+      <p class="w3-large ">Passion</p>
+      <p>What is your passion? “The only way to do great work is to love what you do” – Steve Jobs As what Steve Jobs said, you can see that at our work.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo w3-text-green"></i>
+      <p class="w3-large">Design</p>
+      <p>Designing encompasses many different skills and disciplines in the production and maintenance. Don't need to worry We are highly acknowledged at design.</p>
+    </div>
+
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo w3-text-grey"></i>
+      <p class="w3-large">Support</p>
+      <p>We are promise,"Our support is always with you". If any technical issues made, we can resolve them within no time and make you out of relief.</p><br>
+    </div>
+     <div class="w3-quarter">
+      <i class="fa fa-thumbs-up w3-margin-bottom w3-jumbo w3-text-blue"></i>
+      <p class="w3-large">Superior</p>
+      <p>Superior quality. We are proud to deliver you high quality designs. They will include all benefits that what you need and more superior.</p>
+    </div>
+     <div class="w3-quarter">
+      <i class="fa fa-money w3-margin-bottom w3-jumbo w3-text-teal"></i>
+      <p class="w3-large">Affordable</p>
+      <p>Name itself very low-cost.Affordable Prices is one attribute that make client satisfy and We develop memorable design concepts in very low cost.</p>
+    </div>
+     <div class="w3-quarter">
+      <i class="fa fa-child w3-margin-bottom w3-jumbo w3-text-orange"></i>
+      <p class="w3-large">Unique</p>
+      <p>Referring to your corporate identity, we design a unique website made to measure for your company. The development takes place in all aspects.
+
+        .</p>
+    </div>
+     <div class="w3-quarter">
+      <i class="fa fa-bolt w3-margin-bottom w3-jumbo w3-text-cyan"></i>
+      <p class="w3-large">Extreme-speed</p>
+      <p>Being superior, we have to maintain extreme speed in web performance and work too. We dont know the meaning of "delay", just extreme speed.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:30px">
+  <div class="w3-row-padding">
+    <div class="w3-col m12">
+      <h3>We know design.</h3>
+      <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design; interface design; authoring, including standardised code and proprietary software; user experience design; and search engine optimization. Often many individuals will work in teams covering different aspects of the design process, although some designers will cover them all. The term web design is normally used to describe the design process relating to the front-end (client side) design of a website including writing markup. Web design partially overlaps web engineering in the broader scope of web development. Web designers are expected to have an awareness of usability and if their role involves creating markup then 
+        they are also expected to be up to date with web accessibility guidelines.</p>
+      <p>Although web design has a fairly recent history, it can be linked to other areas such as graphic design. However, web design can also be seen from a technological standpoint. It has become a large part of people’s everyday lives. It is hard to imagine the Internet without animated graphics, different styles of typography, 
+        background, and music.</p>
+        
+    </div>
+    <div class="w3-col m6">
+    <ul class="w3-ul ">
+        <li><h3>Skills and techniques</h3></li>
+        <li><i class="fa fa-check"></i> Marketing and communication design.</li>
+        <li><i class="fa fa-check"></i> User experience design and interactive design.</li>
+        <li><i class="fa fa-check"></i> Page layout.</li>
+        <li><i class="fa fa-check"></i> Typography.</li>
+        <li><i class="fa fa-check"></i> Quality of code.</li>
+    </ul>
+    </div>
+     <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="img/web-design.png" alt="Buildings" width="500" height="500">
+    </div>
+    <p class="w3-margin"><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>
+  <p class="w3-center w3-large">The ones who runs this company</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/design.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3>Govardhan Babu</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>One of the founder,developer,advisor,marketing and business analyser.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/design.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Vamshi Krishna</h3>
+          <p class="w3-opacity">Developer & M.D</p>
+          <p>One of the developer, M.D, requrirement/project taker,business analyser and team leader.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/design.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Bhanu chandra has</h3>
+          <p class="w3-opacity">Developer</p>
+          <p>One of the developer,web-designer,analyser,representative and trainer.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="img/design.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>Raghavendra</h3>
+          <p class="w3-opacity">Creative team manager & invester</p>
+          <p>Creative team manager,personal advisor,investor,marketing and business analyser</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-third">
+    <span class="w3-xxlarge">2+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-third">
+    <span class="w3-xxlarge">2+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-third">
+    <span class="w3-xxlarge">5+</span>
+    <br>Meetings
+  </div>
+</div>
+
+<!-- Work Section -->
+
+<div class="w3-container w3-padding-64 w3-margin" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">What we've done so far</p>
+  <div class=" w3-row w3-center">
+  <div class="w3-half w3-card w3-padding-64">
+    <h3>NextDoor</h3>
+    <p>Packers & Movers,Bangalore</p>
+    <p>Website  :- <a href="https://www.nextdoorpackersandmovers.ga" target="_blank">www.nextdoorpackersandmovers.ga</a></p>
+    <p>Landmark :- Bangalore.</p>
+  </div>
+  <div class="w3-half w3-padding-64 w3-card">
+    <h3>Yerramalla-Tutorials</h3>
+    <p>Yerramalla academy,Anatapuramu</p>
+    <p>Website  :- <a href="https://www.yerramallatutorials.ga" target="_blank">www.yerramallatutorials.ga</a></p>
+    <p>Landmark :-Anatapuramu [LOCAL-PROJECT].</p>
+  </div>
+</div>
+</div>
+<!-- Skills Section -->
+<div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Our Skills.</h3>
+      <p>In order for your business to have a professional presence online, you must seek the services of a web designer. Professional designers have the necessary skills to build industry standard websites that not only meet your business objectives but also launch your brands reputation online. However, to ensure this you need to hire a designer that is skillful and competent; otherwise, you will be throwing your heard earnt money down the drain.</p>
+
+      <p>If you’re in the process of hiring a web designer for your website or you’re questioning the ability of your current designer, then it’s important to know that like most things.</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-globe w3-margin-right"></i>Web Designing & SEO</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:95%">95%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Andriod Apps & Desktop softwares</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-database w3-margin-right"></i>Maintaince & database integrity</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Branding & Logo desinging</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:80%">80%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Service section -->
+<div class="w3-container w3-center" style="padding:128px 16px" id="services">
+	<h1>Services</h1>
+	<h5>That we offer,as of a utility.</h5>
+	<section class="section">
+      <div class="w3-container w3-center">
+        <div class="w3-row">
+          <div class="w3-col m3">
+            <i class="fa fa-laptop w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Web-designing</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-search w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>SEO</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-cloud w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Cloud Hosting</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-android w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Andriod Apps</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-windows w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Desktop softwares</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-cubes w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Embeded Systems</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-database w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Database integration</h3>
+          </div>
+          <div class="w3-col m3">
+            <i class="fa fa-cogs w3-red w3-padding-small w3-round-xlarge"></i>
+            <h3>Maintaince & support</h3>
+          </div>
+        </div>
+        <h2 class="w3-padding-32">More+</h2>
+        <div class="w3-row">
+        	<div class="w3-col m3">
+            <i class="fa fa-bold w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>Blogger Designing</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa fa-google w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>Google-sites Designing</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa fa-wordpress w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>WordPress designing</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa w3-red w3-padding-small w3-round-xlarge"<small>W</small></i>
+        	<h3>Wix-sites desinging</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa fa-facebook w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>Facebook Pages</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa fa-image w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>Branding</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa fa-paint-brush w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>Logo Designing</h3>
+        	</div>
+        	<div class="w3-col m3">
+            <i class="fa fa-github w3-red w3-padding-small w3-round-xlarge"></i>
+        	<h3>Github</h3>
+        	</div>
+        </div>
+      </div>
+    </section>
+</div>
+<!-- Contact Section -->
+<div class="w3-container" style="padding:128px 16px" id="contact">
+  <h1 class="w3-center">CONTACT</h1>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <a href="https://www.google.com/maps/@14.6750436,77.5873703,17z" target="_blank"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Kovurnagar,Anatapuramu - Andhrapradesh</a>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: <a href="tel:+91 9110517177" target="_blank">+91-9110517177</a></p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <a href="mailto:nextdoorpackersandmovers@gmail.com?subject=Feedback" target="_blank">astutesofwaresolutions@gmail.com</a></p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="tel" placeholder="Phone-number" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+   
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+<p>NextDoor &copy; copyright, 2019.All rights reserved.</p>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-google-plus w3-hover-opacity"></i>
+    <i class="fa fa-bold w3-hover-opacity"></i>
+
+   
+  </div>
+</footer>
+ 
+
+ <!-- Scripts -->
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

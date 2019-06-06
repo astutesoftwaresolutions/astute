@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Astute Software Solutions</title>
 <meta charset="UTF-8">
@@ -11,6 +12,9 @@
 <meta name="google-site-verification" content="K9SSB3xCRfDB2SSjOcZnq85p9z8FbYcYG_V4RcssoFI" />
 <meta name="msvalidate.01" content="FD900017E9ECF0D15C2598A49538FCA7" />
 
+ <!-- <link rel="stylesheet" href="css/fontawesome.css"> -->
+
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"> -->
 <style type="text/css">
 	
 	*{
@@ -405,20 +409,20 @@ body, html {
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <a href="mailto:astutesofwaresolutions@gmail.com?subject=Feedback" target="_blank">astutesofwaresolutions@gmail.com</a></p>
     <br>
 	
-    <form name="contact" autocomplete="off" method="post" id="resetForm">
+    <form name="contact" autocomplete="off" method="post" id="resetForm" onsubmit="javascript:hideForm()">
       <p><input name="Name" class="w3-input w3-border" type="text" placeholder="Name" required    ></p>
       <p><input name="Email" class="w3-input w3-border" type="email" placeholder="Email" required      ></p>
       <p><input name="Phone" class="w3-input w3-border" type="tel" placeholder="Phone-number" pattern="[6-9]{1}[0-9]{9}" title="Phone number with 7-9 and remaing 9 digit with 0-9" required ></p>
       <p><input name="Message" class="w3-input w3-border" type="text" placeholder="Message" required ></p>
       <p>
-        <button class="w3-button w3-black" type="submit">
+        <button class="w3-button w3-black" type="submit" onclick="javascript:hideText()">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
 		<button type="reset" class="w3-button w3-black"> <i class="fa fa-refresh"></i> RESET </button>
       </p>
 	
     </form>
-	<p id="demo"></p>
+	<div id="demo"></div>
   </div>
 </div>
 
@@ -446,7 +450,6 @@ body, html {
 <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 -->
 
-
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbznKaN5d63C_RS1bLyobe8-pmziCFCX7IxmlA1vEAhj80oPEvM/exec'
   const form = document.forms['contact']
@@ -454,11 +457,39 @@ body, html {
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => r.innerHTML = "<p class='w3-panel w3-pale-green'>Your form is"+" "+"<span class='w3-text-red'>Successfully</span>"+" "+"posted!</p>")
+      .then(response => r.innerHTML =  "<p class='w3-panel w3-pale-green w3-padding-16'>Your form is"+" "+"<span class='w3-text-red'>Successfully</span>"+" "+"posted!</p>")
       .catch(error => r.innerHTML = "Something went wrong!Try again!")
   })
+
 </script>
 
+
+     <script>
+	
+    //to reset the form after submission..
+	function hideForm(){
+		
+		setTimeout( "doHide()", 2000) ;
+	}
+	
+	function doHide(){
+		
+		document.getElementById("resetForm").reset();
+	}
+	
+	// to delete the success alert after 4 sec...
+	
+	function hideText(){
+		setTimeout( "hideAlert()", 7000) ;
+	}
+	
+	function hideAlert(){
+	
+		document.getElementById( "demo" ).style.display = "none" ;
+	
+	}
+</script>
+        
 <!--End Contact form script -->
 
 <script>

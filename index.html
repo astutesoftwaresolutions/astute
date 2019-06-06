@@ -461,7 +461,7 @@ body, html {
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => r.innerHTML =  "<p class='w3-panel w3-pale-green w3-padding-16'>Your form is"+" "+"<span class='w3-text-red'>Successfully</span>"+" "+"posted!</p>")
+      .then(response => r.innerHTML =  "<p class='w3-panel w3-pale-green w3-padding-16'>Your form data is"+" "+"<span class='w3-text-red'>Successfully</span>"+" "+"posted!</p>")
       .catch(error => r.innerHTML = "Something went wrong!Try again!")
   })
 

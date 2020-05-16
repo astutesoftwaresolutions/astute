@@ -1,2 +1,8 @@
 user-agent: *
 Allow: /
+Sitemap: https://astutesoftwaresolutions/sitemap.xml
+Sitemap: https://astutesoftwaresolutions/index.html
+Sitemap: https://astutesoftwaresolutions/about.html
+Sitemap: https://astutesoftwaresolutions/contact.html
+Sitemap: https://astutesoftwaresolutions/service.html
+Sitemap: https://astutesoftwaresolutions/pricing.html
